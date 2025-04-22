@@ -23,3 +23,4 @@ vim.opt.conceallevel = 1
 vim.g.tex_conceal = "abdmg"
 vim.opt.filetype = "plugin"
 vim.opt.filetype = "indent"
+vim.g.mkdp_images_path = "/mnt/c/Users/bd080/OneDrive - National University of Singapore/Desktop/obs"
