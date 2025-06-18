@@ -29,6 +29,11 @@ mkdir -p ~/.config/
 cd ~/.config
 git clone https://github.com/B1LLP4RK/lazyvim-config.git
 mv lazyvim-config nvim
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+nvm install node
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ```
 
 Above script is just a short version of the one below
@@ -70,6 +75,12 @@ mkdir -p ~/.config/
 cd ~/.config
 git clone https://github.com/B1LLP4RK/lazyvim-config.git
 mv lazyvim-config nvim
+
+# install nvm node and npm for mason.nvim
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+nvm install node
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ```
 
-- run `sudo bash ./install`
