@@ -7,18 +7,33 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 ### WSL Ubuntu
 
-- `vim install`
-- run
+- copy and paste the following script to your terminal
 
-```
+```bash
+# updating and upgrading packages
 sudo apt update
 sudo apt upgrade
 
+sudo apt install build-essential gcc lua5.1 luarocks fzf ripgrep fd-find
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+USERNAME=$(whoami)
+echo >> /home/$USERNAME/.bashrc
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/$USERNAME/.bashrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+brew install neovim
+brew install jesseduffield/lazygit/lazygit
+
+mkdir -p ~/.config/
+cd ~/.config
+git clone https://github.com/B1LLP4RK/lazyvim-config.git
+mv lazyvim-config nvim
 ```
 
-- copy and paste the following script to the open file and exit via `:wq`
+Above script is just a short version of the one below
 
-```
+```bash
 # updating and upgrading packages
 sudo apt update
 sudo apt upgrade
@@ -31,14 +46,14 @@ echo >> /home/$USERNAME/.bashrc
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/$USERNAME/.bashrc
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # Install Homebrew's dependencies if you have sudo access:
-# sudo apt install build-essential
+sudo apt install build-essential
 # For more information, see:
 # https://docs.brew.sh/Homebrew-on-Linux
 
 # We recommend that you install GCC:
 # brew install gcc
-# apt install gcc
-sudo apt install build-essential gcc
+apt install gcc
+
 
 # install neovim
 brew install neovim
@@ -49,14 +64,12 @@ sudo apt install lua5.1 luarocks
 # install lazyvim reqruiements
 brew install jesseduffield/lazygit/lazygit
 # apt install gcc
-apt install fzf ripgrep fd-find
+sudo apt install fzf ripgrep fd-find
 
 mkdir -p ~/.config/
 cd ~/.config
 git clone https://github.com/B1LLP4RK/lazyvim-config.git
 mv lazyvim-config nvim
-
-
 ```
 
 - run `sudo bash ./install`
