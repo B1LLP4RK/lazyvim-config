@@ -86,7 +86,7 @@ nvm install node
 sudo apt install nodejs npm
 ```
 
-- Now run the command `nvim`. Some errors will show up as neovim boots, but ignore with a few presses of space or enter key.
+- Now run the command `nvim`. Some errors will show up as neovim boots, but ignore them with a few presses of space or enter key.
 - Exit via the command `:q`
 - Rerun `nvim`
 
