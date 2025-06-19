@@ -7,7 +7,7 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 ### WSL Ubuntu
 
-- copy and paste the following script to your WSL terminal. Give permission and provide passwords when prompted.
+- Assuming a freshly installed Ubuntu, copy and paste the following script to your WSL terminal. Give permission and provide passwords when prompted.
 
 ```bash
 sudo apt update
@@ -85,5 +85,9 @@ nvm install node
 # for mason.nvim
 sudo apt install nodejs npm
 ```
+
+- Now run the command `nvim`. Some errors will show up as neovim boots, but ignore with a few presses of space or enter key.
+- Exit via the command `:q`
+- Rerun `nvim`
 
 ### Windows
