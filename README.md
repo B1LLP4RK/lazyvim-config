@@ -3,18 +3,17 @@
 A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
 Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
 
-## installation
+## Installation
 
 ### WSL Ubuntu
 
-- copy and paste the following script to your terminal
+- copy and paste the following script to your WSL terminal. Give permission and provide passwords when prompted.
 
 ```bash
-# updating and upgrading packages
 sudo apt update
 sudo apt upgrade
 
-sudo apt install build-essential gcc lua5.1 luarocks fzf ripgrep fd-find
+sudo apt install build-essential gcc lua5.1 luarocks fzf ripgrep fd-find npm nodejs
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 USERNAME=$(whoami)
@@ -82,4 +81,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 nvm install node
+
+# for mason.nvim
+sudo apt install nodejs npm
 ```
+
+### Windows
