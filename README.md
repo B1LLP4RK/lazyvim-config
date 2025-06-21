@@ -126,6 +126,7 @@ vim.g.clipboard = {
 
 ### Windows
 
+Watch the video below
 [![Windows installation tutorial](https://img.youtube.com/vi/EpcyqQPOnow/0.jpg)](https://youtu.be/EpcyqQPOnow)
 
 - [Wezterm](https://wezterm.org/index.html) can be used if you need snacks.image and other graphic usage of lazyvim.
