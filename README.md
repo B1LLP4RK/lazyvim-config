@@ -128,6 +128,8 @@ vim.g.clipboard = {
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EpcyqQPOnow?si=9qjDjhvh3c-R5Eki" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+[![Windows installation tutorial](https://img.youtube.com/vi/odNWJ0edWqHnjwjB/0.jpg)](https://youtu.be/EpcyqQPOnow?si=odNWJ0edWqHnjwjB)
+
 - [Wezterm](https://wezterm.org/index.html) can be used if you need snacks.image and other graphic usage of lazyvim.
 
 ### Termux
