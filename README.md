@@ -126,7 +126,7 @@ vim.g.clipboard = {
 
 ### Windows
 
-[![Tutorial to install Neovim in Windows](https://www.youtube.com/watch?v=EpcyqQPOnow&t=1985s&ab_channel=팍준하)](https://www.youtube.com/watch?v=EpcyqQPOnow&t=1985s&ab_channel=팍준하)
+[![Tutorial to install Neovim in Windows](https://www.youtube.com/watch?v=EpcyqQPOnow&t=1985s&ab_channel=팍준하/0.jpg)](https://www.youtube.com/watch?v=EpcyqQPOnow&t=1985s&ab_channel=팍준하)
 
 - [Wezterm](https://wezterm.org/index.html) can be used if you need snacks.image and other graphic usage of lazyvim.
 
