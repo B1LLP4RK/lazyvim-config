@@ -7,7 +7,7 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 ### WSL Ubuntu
 
-- Assuming a freshly installed Ubuntu, copy and paste the following script to your WSL terminal. Give permission and provide passwords when prompted.
+- Assuming a freshly installed Ubuntu(this means git and curl is available as default), copy and paste the following script to your WSL terminal. Give permission and provide passwords when prompted.
 
 ```bash
 sudo apt update
@@ -90,4 +90,42 @@ sudo apt install nodejs npm
 - Exit via the command `:q`
 - Rerun `nvim`
 
+#### notes on clipboard
+
+There is a issue in how line endings are handled as described [here](https://github.com/LazyVim/LazyVim/discussions/5954#discussioncomment-13178737)
+However I found a workaround.
+Use win32yank in this [link](<https://github.com/equalsraf/win32yank>
+I personally do not prefer this method due to its poor documentation, but too bad its the only option.
+
+Assuming windows and WSL environment,
+
+Download the exe file from release page
+Go to /usr/local/ via cd /usr/local and create a directory win32yank with mkdir win32yank
+add the path via adding export PATH=/usr/local/win32yank:$PATH to your .bashrc
+move the downloaded win32yank.exe to the /usr/local/win32yank
+add below to your `~/.config/nvim/lua/config/options.lua
+
+```
+vim.g.clipboard = {
+  name = "Win32Yank",
+  copy = {
+    ["+"] = "win32yank.exe -i --crlf",
+    ["*"] = "win32yank.exe -i --crlf",
+  },
+  paste = {
+    ["+"] = "win32yank.exe -o --lf",
+    ["*"] = "win32yank.exe -o --lf",
+  },
+  cache_enabled = 0,
+}
+```
+
 ### Windows
+
+[![Tutorial to install Neovim in Windows](https://www.youtube.com/watch?v=EpcyqQPOnow&t=1985s&ab_channel=팍준하)](https://www.youtube.com/watch?v=EpcyqQPOnow&t=1985s&ab_channel=팍준하)
+
+- [Wezterm](https://wezterm.org/index.html) can be used if you need snacks.image and other graphic usage of lazyvim.
+
+### Termux
+
+- tips: lua and luarocks is available in termux pkg by `pkg install lua51 luarocks`
