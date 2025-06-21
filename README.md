@@ -1,7 +1,11 @@
 # 💤 LazyVim
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+Fork from[LazyVim](https://github.com/LazyVim/LazyVim).
+Refer to the [documentation](https://lazyvim.github.io/installation) for more info.
+
+## Major changes from LazyVim
+
+- Neovim detects the terminal environment whether it is in Kitty or Wezterm. Snacks.image is turned off accordingly to avoid issues in other terminals like windows terminal.
 
 ## Installation
 
@@ -128,4 +132,5 @@ vim.g.clipboard = {
 
 ### Termux
 
+- Use the termux branch of this repo and not the main.
 - tips: lua and luarocks is available in termux pkg by `pkg install lua51 luarocks`
