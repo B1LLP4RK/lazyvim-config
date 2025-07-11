@@ -1,6 +1,43 @@
 return {
   "MeanderingProgrammer/render-markdown.nvim",
   opts = {
+    heading = {
+      enabled = true,
+      render_modes = false,
+      atx = true,
+      setext = true,
+      sign = false,
+      icons = { "󰲡 ", "󰲣 ", "󰲥 ", "󰲧 ", "󰲩 ", "󰲫 " },
+      position = "overlay",
+      signs = { "󰫎 " },
+      width = "block",
+      left_margin = 0,
+      left_pad = 2,
+      right_pad = 4,
+      min_width = 0,
+      border = true,
+      border_virtual = false,
+      border_prefix = false,
+      above = "▄",
+      below = "▀",
+      backgrounds = {
+        "RenderMarkdownH1Bg",
+        "RenderMarkdownH2Bg",
+        "RenderMarkdownH3Bg",
+        "RenderMarkdownH4Bg",
+        "RenderMarkdownH5Bg",
+        "RenderMarkdownH6Bg",
+      },
+      foregrounds = {
+        "RenderMarkdownH1",
+        "RenderMarkdownH2",
+        "RenderMarkdownH3",
+        "RenderMarkdownH4",
+        "RenderMarkdownH5",
+        "RenderMarkdownH6",
+      },
+      custom = {},
+    },
     checkbox = {
       -- Checkboxes are a special instance of a 'list_item' that start with a 'shortcut_link'.
       -- There are two special states for unchecked & checked defined in the markdown grammar.
