@@ -1,11 +1,14 @@
 # 💤 LazyVim
 
-Fork from[LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) for more info.
+Fork from [LazyVim](https://github.com/LazyVim/LazyVim).
+
+Refer to the [documentation](https://lazyvim.github.io/installation) for more basic info.
 
 ## Major changes from LazyVim
 
+- Key binding to turn off diagnostics
 - Neovim detects the terminal environment whether it is in Kitty or Wezterm. Snacks.image is turned off accordingly to avoid issues in other terminals like windows terminal.
+- Clipboard fix for WSL Ubuntu avoiding the issue with ^M character
 
 ## Installation
 
@@ -94,19 +97,20 @@ sudo apt install nodejs npm
 - Exit via the command `:q`
 - Rerun `nvim`
 
-#### notes on clipboard
+#### Notes on clipboard
 
 There is a issue in how line endings are handled as described [here](https://github.com/LazyVim/LazyVim/discussions/5954#discussioncomment-13178737)
 However I found a workaround.
-Use win32yank in this [link](<https://github.com/equalsraf/win32yank>
+Use win32yank in this [link](<https://github.com/equalsraf/win32yank>).
+
 I personally do not prefer this method due to its poor documentation, but too bad its the only option.
 
 Assuming windows and WSL environment,
 
-Download the exe file from release page
-Go to /usr/local/ via cd /usr/local and create a directory win32yank with mkdir win32yank
-add the path via adding export PATH=/usr/local/win32yank:$PATH to your .bashrc
-move the downloaded win32yank.exe to the /usr/local/win32yank
+- Download the exe file from release page
+- Go to `/usr/local/` via `cd /usr/local` and create a directory win32yank with `mkdir win32yank`
+- Add the path via adding `export PATH=/usr/local/win32yank:$PATH` to your `.bashrc`.
+- Move the downloaded win32yank.exe to the `/usr/local/win32yank`
 add below to your `~/.config/nvim/lua/config/options.lua
 
 ```
@@ -129,7 +133,7 @@ vim.g.clipboard = {
 Watch the video below
 [![Windows installation tutorial](https://img.youtube.com/vi/EpcyqQPOnow/0.jpg)](https://youtu.be/EpcyqQPOnow)
 
-- [Wezterm](https://wezterm.org/index.html) can be used if you need snacks.image and other graphic usage of lazyvim.
+- [Wezterm](https://wezterm.org/index.html) can potentially be used if you need snacks.image and other graphic usage of lazyvim. Howver I have not found how to make it work so far.
 
 ### Termux
 
