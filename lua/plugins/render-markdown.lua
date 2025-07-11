@@ -12,7 +12,7 @@ return {
       signs = { "󰫎 " },
       width = "block",
       left_margin = 0,
-      left_pad = 2,
+      left_pad = 0,
       right_pad = 4,
       min_width = 0,
       border = true,
@@ -77,6 +77,18 @@ return {
         custom = {
             todo = { raw = '[-]', rendered = '󰥔 ', highlight = 'RenderMarkdownTodo', scope_highlight = nil },
         },
+    },
+    code = {
+      width = "block",
+      left_pad = 2,
+      right_pad = 4,
+      width = "block",
+      min_width = 45,
+      language_pad = 2,
+    },
+    indent = {
+      enabled = true,
+      skip_heading = true,
     },
   },
 }
