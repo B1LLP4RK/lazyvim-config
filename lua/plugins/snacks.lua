@@ -4,7 +4,9 @@ return {
   ---@type snacks.Config
   opts = {
     image = {
-      enabled = vim.fn.getenv("TERM") == "xterm-kitty",
+      enabled = vim.fn.getenv("TERM") == "xterm-kitty" or vim.fn.getenv("TERM") == "xterm-256color",
+      inline = false,
+      float = true,
     },
   },
 }
