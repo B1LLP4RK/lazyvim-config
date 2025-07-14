@@ -118,7 +118,7 @@ Assuming windows and WSL environment,
 - Move the downloaded win32yank.exe to the `/usr/local/win32yank`
 add below to your `~/.config/nvim/lua/config/options.lua
 
-```
+```Vimscript
 vim.g.clipboard = {
   name = "Win32Yank",
   copy = {
@@ -138,7 +138,15 @@ vim.g.clipboard = {
 Watch the video below
 [![Windows installation tutorial](https://img.youtube.com/vi/EpcyqQPOnow/0.jpg)](https://youtu.be/EpcyqQPOnow)
 
-- [Wezterm](https://wezterm.org/index.html) can potentially be used if you need snacks.image and other graphic usage of lazyvim. Howver I have not found how to make it work so far.
+- [Wezterm](https://wezterm.org/index.html) can be used if you need snacks.image.
+  - follow the steps given in this [link](https://github.com/folke/snacks.nvim/discussions/1720#discussioncomment-13645727)
+  > Windows 11
+  > wezterm-nightly-setup.exe
+  > nvim-win64.exe
+  > winget install --id Git.Git -e --source winget
+  > winget install --id=sharkdp.fd  -e
+  > winget install -e --id ImageMagick.ImageMagick
+  > :lua Snacks.image.hover()
 
 ### Termux
 
