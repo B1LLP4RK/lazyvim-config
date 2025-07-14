@@ -7,7 +7,7 @@ Refer to the [documentation](https://lazyvim.github.io/installation) for more ba
 ## Major changes from LazyVim
 
 - Key binding to turn off diagnostics
-  - diagnostics spams warning if you read random readme files online so just turn it off
+  - diagnostics spams warning if you read random readme files online so just turn it off conveniently
 - Neovim detects the terminal environment whether it is in Kitty or Wezterm.
   - Snacks.image is disabled accordingly to avoid issues in other terminals like windows terminal.
 - configuration setup for using snacks.image in Wezterm.
