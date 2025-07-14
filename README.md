@@ -104,9 +104,9 @@ sudo apt install nodejs npm
 
 #### Notes on clipboard
 
-There is a issue in how line endings are handled as described [here](https://github.com/LazyVim/LazyVim/discussions/5954#discussioncomment-13178737)
 However I found a workaround.
-Use win32yank in this [link](<https://github.com/equalsraf/win32yank>).
+
+Use win32yank in this [repo](<https://github.com/equalsraf/win32yank>).
 
 I personally do not prefer this method due to its poor documentation, but too bad its the only option.
 
@@ -138,8 +138,8 @@ vim.g.clipboard = {
 Watch the video below
 [![Windows installation tutorial](https://img.youtube.com/vi/EpcyqQPOnow/0.jpg)](https://youtu.be/EpcyqQPOnow)
 
-- [Wezterm](https://wezterm.org/index.html) can be used if you need snacks.image.
-  - follow the steps given in this [link](https://github.com/folke/snacks.nvim/discussions/1720#discussioncomment-13645727)
+- [Wezterm for windows](https://wezterm.org/index.html) can be used if you need snacks.image.
+  - follow the steps given in this [discussion](https://github.com/folke/snacks.nvim/discussions/1720#discussioncomment-13645727)
   > Windows 11
   > wezterm-nightly-setup.exe
   > nvim-win64.exe
