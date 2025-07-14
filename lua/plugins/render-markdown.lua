@@ -82,7 +82,6 @@ return {
       width = "block",
       left_pad = 2,
       right_pad = 4,
-      width = "block",
       min_width = 45,
       language_pad = 2,
     },
