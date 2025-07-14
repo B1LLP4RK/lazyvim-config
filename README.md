@@ -7,14 +7,19 @@ Refer to the [documentation](https://lazyvim.github.io/installation) for more ba
 ## Major changes from LazyVim
 
 - Key binding to turn off diagnostics
-- Neovim detects the terminal environment whether it is in Kitty or Wezterm. Snacks.image is turned off accordingly to avoid issues in other terminals like windows terminal.
+  - diagnostics spams warning if you read random readme files online so just turn it off
+- Neovim detects the terminal environment whether it is in Kitty or Wezterm.
+  - Snacks.image is disabled accordingly to avoid issues in other terminals like windows terminal.
+- configuration setup for using snacks.image in Wezterm.
 - Clipboard fix for WSL Ubuntu avoiding the issue with ^M character
 
 ## Installation
 
 ### WSL Ubuntu
 
-- Assuming a freshly installed Ubuntu(this means git and curl is available as default), copy and paste the following script to your WSL terminal. Give permission and provide passwords when prompted.
+- Assuming a freshly installed Ubuntu(this means git and curl is available as default)
+- copy and paste the following script to your WSL terminal.
+- Give permission and provide passwords when prompted.
 
 ```bash
 sudo apt update
