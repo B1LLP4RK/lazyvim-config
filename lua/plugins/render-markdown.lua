@@ -1,9 +1,9 @@
 return {
   "MeanderingProgrammer/render-markdown.nvim",
   opts = {
+    render_modes = true,
     heading = {
       enabled = true,
-      render_modes = false,
       atx = true,
       setext = true,
       sign = false,
@@ -45,7 +45,6 @@ return {
       -- Turn on / off checkbox state rendering.
       enabled = true,
       -- Additional modes to render checkboxes.
-      render_modes = false,
       -- Render the bullet point before the checkbox.
       bullet = false,
       -- Padding to add to the right of checkboxes.
