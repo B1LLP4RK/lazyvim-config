@@ -27,5 +27,6 @@ return {
     { "<leader>ctq", ":FlutterQuit<CR>", desc = " Quit" },
     { "<leader>ctl", ":FlutterReload<CR>", desc = " reload" },
     { "<leader>ctL", ":FlutterLspRestart<CR>", desc = " LSP restart" },
+    { "<leader>cts", ":FlutterRestart<CR>", desc = " restart" },
   },
 }
