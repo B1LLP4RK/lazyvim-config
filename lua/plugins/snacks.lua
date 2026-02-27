@@ -8,5 +8,25 @@ return {
       inline = false,
       float = true,
     },
+    -- only for windows
+    terminal = {
+      shell = "powershell",
+    },
+    keys = {
+      {
+        "<c-/>",
+        function()
+          Snacks.terminal()
+        end,
+        desc = "Toggle Terminal",
+      },
+      {
+        "<leader>fT",
+        function()
+          Snacks.terminal()
+        end,
+        { desc = "Terminal (cwd)" },
+      },
+    },
   },
 }
