@@ -8,10 +8,6 @@ return {
       inline = false,
       float = true,
     },
-    -- only for windows
-    terminal = {
-      shell = "powershell",
-    },
     keys = {
       {
         "<c-/>",
