@@ -24,3 +24,5 @@ vim.opt.filetype = "plugin"
 vim.opt.filetype = "indent"
 vim.g.mkdp_images_path = "/mnt/c/Users/bd080/OneDrive - National University of Singapore/Desktop/obs"
 vim.keymap.set("n", "<leader>ce", ":%s/\\r//g<cr>", { desc = "remove carriage retunr line feed" })
+-- only for windows
+vim.o.shell = "powershell"
