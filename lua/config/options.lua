@@ -26,6 +26,10 @@ vim.g.mkdp_images_path = "/mnt/c/Users/bd080/OneDrive - National University of S
 vim.keymap.set("n", "<leader>ce", ":%s/\\r//g<cr>", { desc = "remove carriage retunr line feed" })
 -- only for windows
 vim.o.shell = "powershell"
+
+-- Enable the option to require a Prettier config file
+-- If no prettier config file is found, the formatter will not be used
+vim.g.lazyvim_prettier_needs_config = false
 vim.filetype.add({
   extension = {
     pcsp = "pcsp",
