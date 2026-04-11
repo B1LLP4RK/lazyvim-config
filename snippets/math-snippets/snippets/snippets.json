@@ -11,7 +11,9 @@
     "scope": "",
     "prefix": "dd",
     "body": [
-      "\\$\\$ $1 \\$\\$"
+      "\\$\\$",
+      "$0",
+      "\\$\\$"
     ],
     "description": "Create display math formula"
   },
