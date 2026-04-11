@@ -4,6 +4,14 @@
       {
         "language": "markdown",
         "path": "./markdown.json"
+      },
+      {
+        "language": "csp",
+        "path": "./csp.json"
+      },
+      {
+        "language": "pcsp",
+        "path": "./csp.json"
       }
     ]
   },

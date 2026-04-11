@@ -26,3 +26,8 @@ vim.g.mkdp_images_path = "/mnt/c/Users/bd080/OneDrive - National University of S
 vim.keymap.set("n", "<leader>ce", ":%s/\\r//g<cr>", { desc = "remove carriage retunr line feed" })
 -- only for windows
 vim.o.shell = "powershell"
+vim.filetype.add({
+  extension = {
+    pcsp = "pcsp",
+  },
+})
