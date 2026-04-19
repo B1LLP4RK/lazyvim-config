@@ -11,7 +11,9 @@ Refer to the [documentation](https://lazyvim.github.io/installation) for more ba
 - Neovim detects the terminal environment whether it is in Kitty or Wezterm.
   - Snacks.image is disabled accordingly to avoid issues in other terminals like windows terminal.
 - configuration setup for using snacks.image in Wezterm.
-- Clipboard fix for WSL Ubuntu avoiding the issue with ^M character
+  > [!IMPORTANT]
+  > Don't use the main branch if possible. Use the dedicated WSL or Windows branch that has platoform specific settings.
+  > I use those branches everyday and is hence tested.
 
 ## Installation
 
@@ -102,37 +104,6 @@ sudo apt install nodejs npm
 - Exit via the command `:q`
 - Rerun `nvim`
 
-#### Notes on clipboard
-
-However I found a workaround.
-
-Use win32yank in this [repo](<https://github.com/equalsraf/win32yank>).
-
-I personally do not prefer this method due to its poor documentation, but too bad its the only option.
-
-Assuming windows and WSL environment,
-
-- Download the exe file from release page
-- Go to `/usr/local/` via `cd /usr/local` and create a directory win32yank with `mkdir win32yank`
-- Add the path via adding `export PATH=/usr/local/win32yank:$PATH` to your `.bashrc`.
-- Move the downloaded win32yank.exe to the `/usr/local/win32yank`
-add below to your `~/.config/nvim/lua/config/options.lua
-
-```Vimscript
-vim.g.clipboard = {
-  name = "Win32Yank",
-  copy = {
-    ["+"] = "win32yank.exe -i --crlf",
-    ["*"] = "win32yank.exe -i --crlf",
-  },
-  paste = {
-    ["+"] = "win32yank.exe -o --lf",
-    ["*"] = "win32yank.exe -o --lf",
-  },
-  cache_enabled = 0,
-}
-```
-
 ### Windows
 
 Watch the video below
@@ -140,13 +111,13 @@ Watch the video below
 
 - [Wezterm for windows](https://wezterm.org/index.html) can be used if you need snacks.image.
   - follow the steps given in this [discussion](https://github.com/folke/snacks.nvim/discussions/1720#discussioncomment-13645727)
-  > Windows 11
-  > wezterm-nightly-setup.exe
-  > nvim-win64.exe
-  > winget install --id Git.Git -e --source winget
-  > winget install --id=sharkdp.fd  -e
-  > winget install -e --id ImageMagick.ImageMagick
-  > :lua Snacks.image.hover()
+    > Windows 11
+    > wezterm-nightly-setup.exe
+    > nvim-win64.exe
+    > winget install --id Git.Git -e --source winget
+    > winget install --id=sharkdp.fd -e
+    > winget install -e --id ImageMagick.ImageMagick
+    > :lua Snacks.image.hover()
 
 ### Termux
 
