@@ -1,18 +1,21 @@
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
+--
+-- setup clipboard for WSL, reference in from `:help clipbaord-wsl`
 vim.g.clipboard = {
-  name = "Win32Yank",
+  name = "WslClipboard",
   copy = {
-    ["+"] = "win32yank.exe -i --crlf",
-    ["*"] = "win32yank.exe -i --crlf",
+    ["+"] = "clip.exe",
+    ["*"] = "clip.exe",
   },
   paste = {
-    ["+"] = "win32yank.exe -o --lf",
-    ["*"] = "win32yank.exe -o --lf",
+    ["+"] = 'powershell.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+    ["*"] = 'powershell.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
   },
   cache_enabled = 0,
 }
+
 vim.opt.clipboard:append({ "unnamedplus" })
 
 vim.g.tex_flavor = "latex"
