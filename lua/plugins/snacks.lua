@@ -8,21 +8,5 @@ return {
       inline = false,
       float = true,
     },
-    keys = {
-      {
-        "<c-/>",
-        function()
-          Snacks.terminal()
-        end,
-        desc = "Toggle Terminal",
-      },
-      {
-        "<leader>fT",
-        function()
-          Snacks.terminal()
-        end,
-        { desc = "Terminal (cwd)" },
-      },
-    },
   },
 }

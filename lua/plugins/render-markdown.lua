@@ -1,6 +1,25 @@
 return {
   "MeanderingProgrammer/render-markdown.nvim",
   opts = {
+    latex = { enabled = false },
+    win_options = {
+      conceallevel = {
+        default = vim.api.nvim_get_option_value("conceallevel", {}),
+        rendered = 2, -- <- especially this, so that both plugins play nice
+      },
+      showbreak = {
+        default = "",
+        rendered = "  ",
+      },
+      breakindent = {
+        default = false,
+        rendered = true,
+      },
+      breakindentopt = {
+        default = "",
+        rendered = "",
+      },
+    },
     render_modes = true,
     heading = {
       enabled = true,
@@ -85,8 +104,9 @@ return {
       language_pad = 2,
     },
     indent = {
-      enabled = true,
+      enabled = false,
       skip_heading = true,
     },
+    quote = { repeat_linebreak = true },
   },
 }
