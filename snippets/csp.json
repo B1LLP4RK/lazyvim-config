@@ -1,0 +1,42 @@
+{
+  "define": {
+    "prefix": "define",
+    "body": ["#define ${1:name} ${2:value};"],
+    "description": "CSP #define macro"
+  },
+  "var int": {
+    "prefix": "var",
+    "body": ["var ${1:name} = ${2:0};"],
+    "description": "CSP integer variable"
+  },
+  "var range": {
+    "prefix": "var with range",
+    "body": ["var ${1:name}:${2:{0..2}} = ${3:0};"],
+    "description": "CSP range variable"
+  },
+  "pcase": {
+    "prefix": "pcase",
+    "body": ["pcase{", "\t[${1:prob}]:${2:event} -> ${3:next}", "}"],
+    "description": "CSP probabilistic case"
+  },
+  "if": {
+    "prefix": "if",
+    "body": ["if (${1:condition}) {", "\t$0", "}"],
+    "description": "CSP if statement"
+  },
+  "assert": {
+    "prefix": "assert",
+    "body": ["#assert ${1:condition};"],
+    "description": "CSP assertion"
+  },
+  "assert deadlock": {
+    "prefix": "assert deadlock",
+    "body": ["#assert ${1:Game()} deadlockfree;"],
+    "description": "CSP deadlock freedom assertion"
+  },
+  "assert pmin": {
+    "prefix": "assert pmin",
+    "body": ["#assert ${1:Process} reaches ${2:Goal} with pmin;"],
+    "description": "CSP probabilistic reachability assertion"
+  }
+}

@@ -1,0 +1,25 @@
+return {
+  -- "jbyuki/nabla.nvim",
+  -- config = function()
+  --   require("nabla").enable_virt({ autogen = true })
+  -- end,
+  -- keys = {
+  --   {
+  --     "<leader>o",
+  --     function()
+  --       require("nabla").popup()
+  --     end,
+  --     desc = "nabla math popup",
+  --     mode = { "n" },
+  --   },
+  --
+  --   {
+  --     "<leader><c-o>",
+  --     function()
+  --       require("nabla").popup()
+  --     end,
+  --     desc = "nabla math popup",
+  --     mode = { "i" },
+  --   },
+  -- },
+}

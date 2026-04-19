@@ -1,0 +1,34 @@
+{
+  "latex insert": {
+    "prefix": "mm",
+    "body": ["\\$$1\\$$0"],
+    "description": "LaTeX math mode delimiters"
+  },
+  "code block": {
+    "prefix": "cb",
+    "body": ["```${1:language}", "$2", "```", "$0"],
+    "description": "code block"
+  },
+  "hmap": {
+    "prefix": "hmap",
+    "body": ["h_\\text{MAP}"],
+    "description": "MAP hypothesis for bayesian inference"
+  },
+  "hml": {
+    "prefix": "hml",
+    "body": ["h_\\text{ML}"],
+    "description": "ML hypothesis for bayesian inference"
+  },
+
+  "argmax": {
+    "prefix": "argmax",
+    "body": ["\\arg \\max \\limits_{$1 \\in $2}$0"],
+    "description": "arg max"
+  },
+
+  "set": {
+    "prefix": "set",
+    "body": ["\\{ $1 \\\\}$0"],
+    "description": "set"
+  }
+}
