@@ -3,5 +3,6 @@ return {
   opts = function(_, opts)
     opts.formatters_by_ft.css = { "prettier" }
     opts.formatters_by_ft.javascript = { "prettier" }
+    opts.formatters_by_ft.ts = { "prettier" }
   end,
 }
